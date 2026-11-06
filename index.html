@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yağmur damlan nereye akar?</title>
+<meta name="description" content="Türkiye haritasında bir yere dokun: oraya düşen bir yağmur damlasının derelerden nehirlere, hangi denize ya da göle aktığını izle. HydroRIVERS nehir ağıyla.">
+<meta property="og:title" content="Yağmur damlan nereye akar?">
+<meta property="og:description" content="Bir yere dokun, damlanın denize kadar yolunu izle. Fırat'tan Basra Körfezi'ne, Aras'tan Hazar'a.">
+<meta property="og:image" content="https://birtohum.github.io/damlanin-yolu/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stil.css?v=1">
+</head>
+<body>
+<main>
+  <header>
+    <p class="ust-etiket">HydroRIVERS · 15.430 akarsu parçası</p>
+    <h1>Yağmur damlan<br>nereye akar?</h1>
+    <p class="giris">Haritada bir yere dokun. Oraya düşen damlanın derelerden nehirlere, denize ya da bir göle kadar yolunu çizelim.</p>
+    <div class="hazir" id="hazir"></div>
+  </header>
+  <section class="harita-kutu">
+    <canvas id="harita" aria-label="Türkiye akarsu haritası; bir yere dokun"></canvas>
+    <div class="bekle" id="bekle">Nehirler yükleniyor…</div>
+  </section>
+  <section class="sonuc" id="sonuc" aria-live="polite"></section>
+  <footer class="dip">
+    <p><b>Veri:</b> <a href="https://www.hydrosheds.org/products/hydrorivers">HydroRIVERS v1.0</a> (Lehner ve Grill 2013, HydroSHEDS lisansı; atıfla serbest). Türkiye'de, yukarı havzası en az 100 km² olan akarsu parçaları ile bunların denize ya da göle kadar Türkiye dışındaki devamları gösteriliyor. Ağızdaki debi, HydroRIVERS'ın model tahmini olan uzun dönem ortalamasıdır. İl sınırları <a href="https://www.geoboundaries.org/">geoBoundaries</a> (CC BY-SA 2.0).</p>
+    <p><b>Sınırlar:</b> Dokunduğun noktaya en yakın, havzası 100 km²'den büyük akarsu seçilir. Damla gerçekte önce daha küçük bir dereye akar, ama sonunda aynı akarsuya ulaşır; ayrım noktası iki havzanın sınırına yakınsa sonuç yanılabilir. Barajlar, sulama kanalları ve yeraltı suyu hesaba katılmıyor. HydroRIVERS'ta nehir adları olmadığı için yol, geçtiği illerle anlatılıyor. Dicle ve Fırat Basra Körfezi'ne birlikte döküldüğü için ikisi de aynı ağıza varıyor.</p>
+    <p><a href="https://github.com/birtohum/damlanin-yolu">Kaynak kodu</a> · <a href="https://birtohum.github.io/">birtohum</a></p>
+  </footer>
+</main>
+<script src="uygulama.js?v=1"></script>
+</body>
+</html>

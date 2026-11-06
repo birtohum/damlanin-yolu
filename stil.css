@@ -1,0 +1,44 @@
+:root {
+  --zemin: #f4f6f7; --kart: #fff; --yazi: #12181f; --soluk: #5f6b76; --cizgi: #dde3e7; --vurgu: #0369a1;
+  --kara: #ffffff; --sinir: #d5dce1; --nehir: #8fb3c9; --yol: #0369a1; --dis: #eef1f3;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --zemin: #0d1217; --kart: #151b22; --yazi: #e8edf1; --soluk: #95a2ad; --cizgi: #26303a; --vurgu: #38bdf8;
+    --kara: #151b22; --sinir: #2a3540; --nehir: #2f5a75; --yol: #38bdf8; --dis: #0f151b;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--zemin); color: var(--yazi); font: 16px/1.55 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1120px; margin: 0 auto; padding: 44px 20px 40px; }
+a { color: inherit; }
+.ust-etiket { margin: 0 0 10px; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--vurgu); }
+h1 { margin: 0 0 14px; font-size: clamp(42px, 8vw, 78px); line-height: 1; letter-spacing: -0.045em; font-weight: 800; }
+.giris { margin: 0; font-size: 18px; color: var(--soluk); max-width: 620px; }
+.hazir { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+.hazir button { font: inherit; font-size: 14px; font-weight: 500; border: 1px solid var(--cizgi); border-radius: 999px; padding: 5px 13px; background: var(--kart); color: var(--yazi); cursor: pointer; }
+.hazir button:hover { border-color: var(--yazi); }
+button:focus-visible { outline: 2px solid var(--vurgu); outline-offset: 2px; }
+.harita-kutu { position: relative; margin-top: 18px; border-radius: 14px; overflow: hidden; border: 1px solid var(--cizgi); background: var(--dis); }
+#harita { display: block; width: 100%; height: min(62vh, 560px); cursor: crosshair; touch-action: manipulation; }
+.bekle { position: absolute; inset: 0; display: grid; place-items: center; font-weight: 600; background: color-mix(in oklab, var(--zemin) 70%, transparent); }
+.bekle[hidden] { display: none; }
+.sonuc { margin-top: 20px; min-height: 120px; }
+.sonuc .cumle { font-size: clamp(20px, 2.6vw, 27px); line-height: 1.4; letter-spacing: -0.01em; margin: 0; max-width: 900px; }
+.sonuc .cumle b.v { color: var(--vurgu); }
+.sonuc .kutular { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+.sonuc .kutu { background: var(--kart); border: 1px solid var(--cizgi); border-radius: 12px; padding: 14px 16px; }
+.sonuc .kutu b { display: block; font-size: 26px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.sonuc .kutu span { font-size: 13px; color: var(--soluk); }
+.sonuc .iller { margin-top: 14px; color: var(--soluk); font-size: 15px; }
+.dip { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--cizgi); font-size: 13px; color: var(--soluk); }
+.dip p { margin: 0 0 10px; max-width: 820px; }
+@media (max-width: 640px) {
+  main { padding: 30px 16px 30px; }
+  .giris { font-size: 16px; }
+  #harita { height: 56vh; }
+  .sonuc .kutular { gap: 8px; }
+  .sonuc .kutu { padding: 10px; }
+  .sonuc .kutu b { font-size: 19px; }
+}
