@@ -1,0 +1,11 @@
+:root{--zemin:#04161f;--kart:#07222e;--yazi:#e6f8ff;--soluk:#86aebd;--cizgi:#123847;--vurgu:#3be0ff}
+body{font-family:Sora,sans-serif;background:linear-gradient(180deg,#062c3c 0,#04161f 420px)}
+h1{font-weight:800;font-size:clamp(46px,9vw,100px);letter-spacing:-.04em;background:linear-gradient(180deg,#fff 20%,#3be0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ust-etiket{letter-spacing:.18em;font-weight:400}
+button{background:transparent!important;color:var(--yazi)!important;border:1px solid var(--cizgi)!important}
+button:hover{border-color:var(--vurgu)!important}
+h1{text-wrap:balance}
+.dip{border-top:1px solid var(--cizgi)}
+/*2*/
+:root{--kara:#0a2a3a;--sinir:#123f52;--nehir:#2a86a8;--yol:#ffe066;--dis:#04161f}
+.harita-kutu{border-color:#123847;box-shadow:0 0 80px -30px #3be0ff}
